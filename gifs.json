@@ -82,7 +82,7 @@
   },
   "nom": {
     "description": "Nom someone!",
-    "message": wall-kiss-davydoff-gif-wall-kiss-davydoff-love.gif{tagger} noms {tagged}, yum 😋",
+    "message": "{tagger} noms {tagged}, yum 😋",
     "urls": [
       ".gifs/nom/aww-cute-gif-aww-cute.gif",
       ".gifs/nom/cat-cat-meme-gif-cat-cat-meme-bite.gif",
