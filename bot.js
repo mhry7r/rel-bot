@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
 const gifs = require('./gifs.json');
 
 const client = new Client({
@@ -48,13 +48,7 @@ client.on('interactionCreate', async (interaction) => {
       .replace('{tagged}', '**everyone**');
   }
 
-  // Send as an embed so the GIF renders properly instead of showing as a raw link
-  const embed = new EmbedBuilder()
-    .setDescription(message)
-    .setImage(gif)
-    .setColor(0xf4a7c3);
-
-  await interaction.reply({ embeds: [embed] });
+  await interaction.reply({ content: `${message}\n${gif}` });
 });
 
 client.login(process.env.DISCORD_TOKEN);
