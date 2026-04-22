@@ -1,8 +1,10 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const gifs = require('./gifs.json');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
+});
 
 function randomGif(category) {
   const pool = gifs[category].urls;
@@ -25,19 +27,34 @@ client.on('interactionCreate', async (interaction) => {
   if (!gif) return interaction.reply({ content: '😅 No GIFs found!', ephemeral: true });
 
   const target = interaction.options.getUser('user');
-  const tagger = interaction.user.username;
+
+  // Use server nickname if available, otherwise fall back to display name
+  const taggerMember = interaction.member;
+  const tagger = taggerMember?.nickname || interaction.user.displayName || interaction.user.username;
 
   let message;
   if (target) {
-    const template = gifs[commandName].message;
-    message = template
+    // Get the target's server nickname too
+    const targetMember = await interaction.guild.members.fetch(target.id).catch(() => null);
+    const targetName = targetMember?.nickname || target.displayName || target.username;
+
+    message = gifs[commandName].message
       .replace('{tagger}', `**${tagger}**`)
-      .replace('{tagged}', `**${target.username}**`);
+      .replace('{tagged}', `**${targetName}**`);
   } else {
-    message = `**${tagger}** used /${commandName}!`;
+    // No target — still use the template but replace {tagged} with "everyone"
+    message = gifs[commandName].message
+      .replace('{tagger}', `**${tagger}**`)
+      .replace('{tagged}', '**everyone**');
   }
 
-  await interaction.reply({ content: `${message}\n${gif}` });
+  // Send as an embed so the GIF renders properly instead of showing as a raw link
+  const embed = new EmbedBuilder()
+    .setDescription(message)
+    .setImage(gif)
+    .setColor(0xf4a7c3);
+
+  await interaction.reply({ embeds: [embed] });
 });
 
 client.login(process.env.DISCORD_TOKEN);
