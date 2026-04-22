@@ -43,10 +43,22 @@ client.on('interactionCreate', async (interaction) => {
       .replace('{tagged}', '**everyone**');
   }
 
-  // Message text displays naturally, embed just holds the GIF — no raw URL visible
-  const gifEmbed = new EmbedBuilder().setImage(gif);
+  const isLocal = !gif.startsWith('http');
 
-  await interaction.reply({ content: message, embeds: [gifEmbed] });
+  if (isLocal) {
+    const { AttachmentBuilder } = require('discord.js');
+    const attachment = new AttachmentBuilder(gif);
+    const filename = gif.split('/').pop();
+    const gifEmbed = new EmbedBuilder()
+      .setDescription(message)
+      .setImage(`attachment://${filename}`);
+    await interaction.reply({ files: [attachment], embeds: [gifEmbed] });
+  } else {
+    const gifEmbed = new EmbedBuilder()
+      .setDescription(message)
+      .setImage(gif);
+    await interaction.reply({ embeds: [gifEmbed] });
+  }
 });
 
 client.login(process.env.DISCORD_TOKEN);
