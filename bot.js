@@ -4,9 +4,8 @@ const gifs = require('./gifs.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-// Pick a random gif from a pool
 function randomGif(category) {
-  const pool = gifs[category];
+  const pool = gifs[category].urls;
   if (!pool || pool.length === 0) return null;
   return pool[Math.floor(Math.random() * pool.length)];
 }
@@ -20,14 +19,25 @@ client.on('interactionCreate', async (interaction) => {
 
   const { commandName } = interaction;
 
-  if (gifs[commandName]) {
-    const gif = randomGif(commandName);
-    if (gif) {
-      await interaction.reply(gif);
-    } else {
-      await interaction.reply({ content: '😅 No GIFs found for this command!', ephemeral: true });
-    }
+  if (!gifs[commandName]) return;
+
+  const gif = randomGif(commandName);
+  if (!gif) return interaction.reply({ content: '😅 No GIFs found!', ephemeral: true });
+
+  const target = interaction.options.getUser('user');
+  const tagger = interaction.user.username;
+
+  let message;
+  if (target) {
+    const template = gifs[commandName].message;
+    message = template
+      .replace('{tagger}', `**${tagger}**`)
+      .replace('{tagged}', `**${target.username}**`);
+  } else {
+    message = `**${tagger}** used /${commandName}!`;
   }
+
+  await interaction.reply({ content: `${message}\n${gif}` });
 });
 
 client.login(process.env.DISCORD_TOKEN);
