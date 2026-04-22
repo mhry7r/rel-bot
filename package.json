@@ -1,0 +1,14 @@
+{
+  "name": "discord-gif-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot that sends random GIFs per command",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "register": "node register.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  }
+}
