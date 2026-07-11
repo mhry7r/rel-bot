@@ -53,7 +53,10 @@
       "./gifs/cuddle/puuung-puuung-sleep-gif-puuung-puuung-sleep-puuung-kiss.gif",
       "./gifs/cuddle/puuung-sleep-puuung-lay-gif-puuung-sleep-puuung-lay-puuung-c.gif",
       "./gifs/cuddle/romance-couple-couple-romance-kiss-gif-romance-couple-couple.gif",
-      "./gifs/cuddle/sidku-prachku-gif-sidku-prachku-couple-sleep.gif"
+      "./gifs/cuddle/sidku-prachku-gif-sidku-prachku-couple-sleep.gif",
+      "./gifs/cuddle/cuddle1",
+      "./gifs/cuddle/cuddle2",
+      "./gifs/cuddle/cuddle3"
     ]
   },
   "freak": {
@@ -76,7 +79,31 @@
       "./gifs/freak/romantic-kiss-romantic-couple-gif-romantic-kiss-romantic-cou.gif",
       "./gifs/freak/sextet-love-gif-sextet-love.gif",
       "./gifs/freak/the-vampire-diaries-tvd-gif-the-vampire-diaries-tvd-delena.gif",
-      "./gifs/freak/wall-kiss-davydoff-gif-wall-kiss-davydoff-love.gif"
+      "./gifs/freak/wall-kiss-davydoff-gif-wall-kiss-davydoff-love.gif",
+      "./gifs/freak2/freak1.gif",
+      "./gifs/freak2/freak2.gif",
+      "./gifs/freak2/freak3.gif",
+      "./gifs/freak2/freak4.gif",
+      "./gifs/freak2/freak5.gif",
+      "./gifs/freak2/freak6.gif",
+      "./gifs/freak2/freak7.gif",
+      "./gifs/freak2/freak8.gif",
+      "./gifs/freak2/freak9.gif",
+      "./gifs/freak2/freak10.gif",
+      "./gifs/freak2/freak11.gif",
+      "./gifs/freak2/freak12.gif",
+      "./gifs/freak2/freak13.gif",
+      "./gifs/freak2/freak14.gif",
+      "./gifs/freak2/freak15.gif",
+      "./gifs/freak2/freak16.gif",
+      "./gifs/freak2/freak17.gif",
+      "./gifs/freak2/freak18.gif",
+      "./gifs/freak2/freak19.gif",
+      "./gifs/freak2/freak20.gif",
+      "./gifs/freak2/freak21.gif",
+      "./gifs/freak2/freak22.gif",
+      "./gifs/freak2/freak23.gif",
+      "./gifs/freak2/freak24.gif"
     ]
   },
   "nom": {
@@ -93,6 +120,125 @@
       "./gifs/nom/orange-cat-chomp-orange-cat-bite-gif-orange-cat-chomp-orange.gif",
       "./gifs/nom/peach-goma-gif-peach-goma-peach-nom.gif",
       "./gifs/nom/ug-170819971998-gif-ug-170819971998.gif"
+    ]
+  },
+  "comfort": {
+    "description": "Comfort someone!",
+    "message": "{tagger} wraps {tagged} in a warm embrace 🫂 you're not alone 💛",
+    "urls": [
+      "./gifs/comfort/comfort1.gif",
+      "./gifs/comfort/comfort2.gif",
+      "./gifs/comfort/comfort3.gif",
+      "./gifs/comfort/comfort4.gif",
+      "./gifs/comfort/comfort5.gif",
+      "./gifs/comfort/comfort6.gif",
+      "./gifs/comfort/comfort7.gif",
+      "./gifs/comfort/comfort8.gif",
+      "./gifs/comfort/comfort9.gif"
+    ]
+  },
+  "pout": {
+    "description": "Pout at someone!",
+    "message": "{tagger} is pouting at {tagged} 🥺 say sorry right now!!",
+    "urls": [
+      "./gifs/pout/pout1.gif",
+      "./gifs/pout/pout2.gif",
+      "./gifs/pout/pout3.gif",
+      "./gifs/pout/pout4.gif",
+      "./gifs/pout/pout5.gif",
+      "./gifs/pout/pout6.gif"
+    ]
+  },
+  "love": {
+    "description": "Show someone some love!",
+    "message": "{tagger} is showering {tagged} with love 💖✨",
+    "urls": [
+      "./gifs/love/love1.gif",
+      "./gifs/love/love2.gif",
+      "./gifs/love/love3.gif",
+      "./gifs/love/love4.gif",
+      "./gifs/love/love5.gif",
+      "./gifs/love/love6.gif",
+      "./gifs/love/love7.gif",
+      "./gifs/love/love8.gif",
+      "./gifs/love/love9.gif",
+      "./gifs/love/love10.gif",
+      "./gifs/love/love11.gif"
+    ]
+  },
+  "holdhands": {
+    "description": "Hold hands with someone!",
+    "message": "{tagger} reaches out and holds {tagged}'s hand 🤝💕",
+    "urls": [
+      "./gifs/holdhands/holdhands1.gif",
+      "./gifs/holdhands/holdhands2.gif",
+      "./gifs/holdhands/holdhands3.gif",
+      "./gifs/holdhands/holdhands4.gif",
+      "./gifs/holdhands/holdhands5.gif",
+      "./gifs/holdhands/holdhands6.gif",
+      "./gifs/holdhands/holdhands7.gif",
+      "./gifs/holdhands/holdhands8.gif"
+    ]
+  },
+  "headpat": {
+    "description": "Give someone a headpat!",
+    "message": "{tagger} gives {tagged} the gentlest headpat 🥹✋",
+    "urls": [
+      "./gifs/headpat/headpat1.gif",
+      "./gifs/headpat/headpat2.gif",
+      "./gifs/headpat/headpat3.gif",
+      "./gifs/headpat/headpat4.gif",
+      "./gifs/headpat/headpat5.gif",
+      "./gifs/headpat/headpat6.gif",
+      "./gifs/headpat/headpat7.gif",
+      "./gifs/headpat/headpat8.gif",
+      "./gifs/headpat/headpat9.gif",
+      "./gifs/headpat/headpat10.gif",
+      "./gifs/headpat/headpat11.gif"
+    ]
+  },
+  "foreheadkiss": {
+    "description": "Give someone a forehead kiss!",
+    "message": "{tagger} places the softest forehead kiss on {tagged} 😚💫",
+    "urls": [
+      "./gifs/foreheadkiss/foreheadkiss1.gif",
+      "./gifs/foreheadkiss/foreheadkiss2.gif",
+      "./gifs/foreheadkiss/foreheadkiss3.gif",
+      "./gifs/foreheadkiss/foreheadkiss4.gif",
+      "./gifs/foreheadkiss/foreheadkiss5.gif",
+      "./gifs/foreheadkiss/foreheadkiss6.gif",
+      "./gifs/foreheadkiss/foreheadkiss7.gif",
+      "./gifs/foreheadkiss/foreheadkiss8.gif",
+      "./gifs/foreheadkiss/foreheadkiss9.gif"
+    ]
+  },
+  "blush": {
+    "description": "Blush at someone!",
+    "message": "{tagger} is blushing because of {tagged} 😳💗",
+    "urls": [
+      "./gifs/blush/blush1.gif",
+      "./gifs/blush/blush2.gif",
+      "./gifs/blush/blush3.gif",
+      "./gifs/blush/blush4.gif",
+      "./gifs/blush/blush5.gif",
+      "./gifs/blush/blush6.gif",
+      "./gifs/blush/blush7.gif",
+      "./gifs/blush/blush8.gif",
+      "./gifs/blush/blush9.gif",
+      "./gifs/blush/blush10.gif"
+    ]
+  },
+  "faint": {
+    "description": "Faint over someone!",
+    "message": "{tagger} has fainted over {tagged} 💘😵 too hot to handle!!",
+    "urls": [
+      "./gifs/faint/faint1.gif",
+      "./gifs/faint/faint2.gif",
+      "./gifs/faint/faint3.gif",
+      "./gifs/faint/faint4.gif",
+      "./gifs/faint/faint5.gif",
+      "./gifs/faint/faint6.gif",
+      "./gifs/faint/faint7.gif"
     ]
   }
 }
